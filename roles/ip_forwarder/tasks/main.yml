@@ -63,5 +63,5 @@
 
 - name: Kill the NetworkManager process if found
   command: pkill -2 -f NetworkManager
-  when: pgrep_result.rc == 0
+  when: pgrep_result is succeeded
 

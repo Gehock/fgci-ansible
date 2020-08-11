@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ ! -f /etc/libvirt/qemu/{{ inventory_hostname.split('.').0 }}.xml ]; then
-
+# FIXME: creates a rhel7 vm, this might not be desired
 virt-install \
   --name {{ inventory_hostname.split('.').0 }} \
   --os-variant rhel7 \

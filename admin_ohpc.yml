@@ -26,25 +26,24 @@
           internal_interface in ansible_interfaces and
           external_interface in ansible_interfaces }
   - { role: ansible-role-hosts-int, tags: [ 'hosts'] }
-  - { role: ansible-role-ferm-firewall, tags: [ 'firewall', 'network' ] }
+  # - { role: ansible-role-ferm-firewall, tags: [ 'firewall', 'network' ] }  # broken
   - { role: ansible-role-chrony, tags: [ 'ntp', 'chrony' ] }
-  - { role: ansible-role-yum-cron-2, tags: [ 'yumcron' ] }
+  # - { role: ansible-role-yum-cron-2, tags: [ 'yumcron' ] }  # outdated
   - { role: ansible-role-rsyslog, tags: [ 'rsyslog' ] }
   - { role: ansible-role-aliases, tags: [ 'aliases', 'email' ] }
   - { role: ansible-role-sshd, tags: [ 'sshd', 'ssh' ] }
-  - { role: ansible-role-smartd, tags: [ 'smartd' ] }
-  - { role: ansible-role-dell, tags: [ 'dell' ] }
-  - { role: ansible-role-rdma, tags: [ 'rdma', 'infiniband' ] }
+  # - { role: ansible-role-smartd, tags: [ 'smartd' ] }  # -C
+  # - { role: ansible-role-dell, tags: [ 'dell' ] }  # skip
+  # - { role: ansible-role-rdma, tags: [ 'rdma', 'infiniband' ] }  # skip
   - { role: ansible-role-postfix, tags: [ 'postfix', 'mail' ] }
   - { role: ansible-role-autofs, tags: [ 'autofs' ] }
-  - { role: ansible-role-pdsh-genders, tags: [ 'pdsh', 'genders' ] }
+  # - { role: ansible-role-pdsh-genders, tags: [ 'pdsh', 'genders' ] }  # broken
   - { role: ansible-role-systemd-journal, tags: [ 'systemd', 'journal', 'journald' ] }
-  - { role: ansible-role-slurm, tags: [ 'slurm' ] }
+  # - { role: ansible-role-slurm, tags: [ 'slurm' ] }
 #  - { role: ansible-role-flowdock, tags: [ 'flowdock', 'always' ] }
-  - { role: ansible-role-ohpc-setup, tags: [ 'ohpc' ] }
+  # - { role: ansible-role-ohpc-setup, tags: [ 'ohpc' ] }  # -C
 
 
 # Local addons to this playbook
 #
 #- import_playbook: admin_local_play.yml
-                                      
