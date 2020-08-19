@@ -5,7 +5,7 @@
   sysctl:
      name: net.ipv4.ip_forward
      value: "1"
-     sysctl_set: yes 
+     sysctl_set: yes
      reload: no
   remote_user: root
 
