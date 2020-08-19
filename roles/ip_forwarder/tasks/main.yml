@@ -43,6 +43,7 @@
   when: reg_dhcpclient.stdout != ""
   ignore_errors: true
 
+  # TODO: Check
 - name: Check if NetworkManager is installed
   stat:
      path: "/usr/lib/systemd/system/NetworkManager.service"
